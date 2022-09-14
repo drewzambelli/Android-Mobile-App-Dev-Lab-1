@@ -8,9 +8,7 @@
 Basic Android App which presents user with a question and upon clicking the question, the answer appears.
 
 ### App Walk-though
-<img src="https://recordit.co/jhD8nVGcnf" width=200><br>
-
-`TODO://` In the User stories section below, add an `x` between the `-[ ]` like this `- [x]` for any user story you complete. (☝️ Remove this paragraph after after checking off user stories)
+<img src="http://g.recordit.co/jhD8nVGcnf.gif" width=200><br>
 
 ## Required
 - [x] Create New Project in Android Studio
