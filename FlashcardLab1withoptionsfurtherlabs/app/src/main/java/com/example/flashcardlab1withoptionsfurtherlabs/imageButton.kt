@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 
+
 class imageButton : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,16 +22,15 @@ class imageButton : AppCompatActivity() {
         findViewById<View>(R.id.saveButton).setOnClickListener {
             Intent(this, MainActivity::class.java)
 
-
             val data = Intent()
 
             data.putExtra(
-                "string1",
+                "question",
                 findViewById<EditText>(R.id.questionTextField).text.toString()
             )
 
             data.putExtra(
-                "string2",
+                "answer",
                 findViewById<EditText>(R.id.answerTextField).text.toString()
             )
 

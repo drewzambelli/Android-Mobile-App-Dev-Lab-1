@@ -10,11 +10,11 @@
         android:id="@+id/flashcard_question"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:background="#1848f5"
         android:gravity="center"
         android:text="What is the longest river in the world?"
-        android:textSize="40sp"
-        android:background="#1848f5"
-        android:textColor="#f5d018"/>
+        android:textColor="#f5d018"
+        android:textSize="40sp" />
 
     <TextView
         android:id="@+id/flashcard_answer"
@@ -38,6 +38,18 @@
         android:background="@color/white"
         android:clickable="true"
         app:srcCompat="@drawable/plus_sign_button"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/next_button"
+        android:layout_width="53dp"
+        android:layout_height="52dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="349dp"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/ic_next_button"
         tools:ignore="SpeakableTextPresentCheck" />
 
 
