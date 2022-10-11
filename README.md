@@ -5,7 +5,7 @@ For Lab 3, we implemented a system to allow users to enter multiple flashcards a
 
 ### App Walk-though
 
-<img src=http://g.recordit.co/XW4wT3aSy3.gif width=200><br>
+<img src=http://g.recordit.co/9RSJzVD1pr.gif width=200><br>
 
 ## Required
 - [x] User can create a card and still see their created card when the app is relaunched.
