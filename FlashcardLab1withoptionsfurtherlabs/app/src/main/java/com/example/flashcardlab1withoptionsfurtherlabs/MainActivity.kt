@@ -3,17 +3,24 @@ package com.example.flashcardlab1withoptionsfurtherlabs
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
 import android.view.View
+import android.view.ViewAnimationUtils
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
 import com.google.android.material.snackbar.Snackbar
+import java.security.AccessController.getContext
 
 class MainActivity : AppCompatActivity() {
 
     lateinit var flashcardDatabase: FlashcardDatabase //week 5 lab
     var allFlashcards = mutableListOf<Flashcard>() //week 5 lab
     var currentCardDisplayedIndex = 0 //week 5 lab
+
+    var countDownTimer: CountDownTimer? = null //week 7 lab
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,8 +39,14 @@ class MainActivity : AppCompatActivity() {
         }
 
         flashcardQuestion.setOnClickListener {
+            val cx = flashcardAnswer.width/2
+            val cy = flashcardAnswer.height/2
+            val finalRadius = Math.hypot(cx.toDouble(), cy.toDouble()).toFloat()
+            val anim = ViewAnimationUtils.createCircularReveal(flashcardAnswer, cx, cy, 0f, finalRadius)
             flashcardQuestion.visibility = View.INVISIBLE
             flashcardAnswer.visibility = View.VISIBLE
+            anim.duration = 1000
+            anim.start()
         }
 
         flashcardAnswer.setOnClickListener {
@@ -46,6 +59,26 @@ class MainActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
             currentCardDisplayedIndex++
+            //Lab week 7
+            val leftOutAnim = AnimationUtils.loadAnimation(this, R.anim.left_out)
+            val rightInAnim = AnimationUtils.loadAnimation(this, R.anim.right_in)
+            flashcardQuestion.startAnimation(leftOutAnim)
+            leftOutAnim.setAnimationListener(object : Animation.AnimationListener {
+                override fun onAnimationStart(animation: Animation?) {
+                    // this method is called when the animation first starts
+
+                }
+
+                override fun onAnimationEnd(animation: Animation?) {
+                    // this method is called when the animation is finished playing
+                    flashcardQuestion.startAnimation(rightInAnim)
+                }
+
+                override fun onAnimationRepeat(animation: Animation?) {
+                    // we don't need to worry about this method
+                }
+            })
+
 
             if(currentCardDisplayedIndex >= allFlashcards.size) {
                 Snackbar.make(
@@ -97,7 +130,7 @@ class MainActivity : AppCompatActivity() {
                 // once we come back here from EndingActivity
 
                 resultLauncher.launch(intent)
-
+                overridePendingTransition(R.anim.right_in, R.anim.left_out)
             }
 
     }

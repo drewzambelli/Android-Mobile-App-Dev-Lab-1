@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.3125" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/cancel_button.xml" value="0.3125" />
+        <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/ic_appicon.xml" value="0.266" />
+        <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/ic_launcher_background.xml" value="0.266" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/ic_next_button.xml" value="0.327" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/plus_sign_button.xml" value="0.3365" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/drawable/save_icon.xml" value="0.2245" />
@@ -13,6 +15,9 @@
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/layout/activity_button.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/layout/activity_image_button.xml" value="0.29283489096573206" />
         <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/mipmap-anydpi-v26/appICON.xml" value="0.2655" />
+        <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/mipmap-anydpi-v26/app_icon_final.xml" value="0.1" />
+        <entry key="..\:/Users/drewr/AndroidStudioProjects/FlashcardLab1withoptionsfurtherlabs/app/src/main/res/mipmap-anydpi-v26/app_icon_final_round.xml" value="0.15" />
       </map>
     </option>
   </component>
